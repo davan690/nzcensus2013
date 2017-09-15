@@ -11,7 +11,8 @@ This package is not associated with the New Zealand government.
 The data was extracted from the spreadsheet by using the
 [tidyxl](https://nacnudus.github.io/tidyxl) and
 [unpivotr](https://nacnudus.github.io/unpivotr) packages, after first converting
-the `.xls` file to the `.xlsx` format.  See the script `data-raw/extract.R`.
+the `.xls` file to the `.xlsx` format.  See the script
+[`data-raw/extract.R`](https://github.com/nacnudus/nzcensus2013/blob/master/data-raw/extract.R).
 
 Other New Zealand dataset by the same author:
 
