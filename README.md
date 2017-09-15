@@ -14,6 +14,14 @@ The data was extracted from the spreadsheet by using the
 the `.xls` file to the `.xlsx` format.  See the script
 [`data-raw/extract.R`](https://github.com/nacnudus/nzcensus2013/blob/master/data-raw/extract.R).
 
+A similar package, [nzcensus](https://github.com/ellisp/nzelect), wraps the
+finer-grained meshblock-level data.  An advantage of the aggregate data in
+`nzcensus2013` is that certain totals and aggregations have been performed by
+Stats NZ themselves, *before* random rounding, so that they are more accurate
+than home-brewed aggregations on the randomly-rounded meshblock data.  The
+meshblock data in `nzcensus` has many advantages, too, so ... horses for
+courses.
+
 Other New Zealand dataset by the same author:
 
 * [nzpullover](https://nacnudus.github.io/nzpullover) -- road policing
