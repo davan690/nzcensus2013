@@ -8,6 +8,9 @@
 
 * `sheet` the name of the table and the worksheet that the data was imported
     from
+* `title` the title of the table
+* `dimensions` the subgroups that the table uses
+* `population` the population that the table reports
 * `row` the row number of the cell that the data was imported from
 * `col` the column number of the cell that the data was imported from
 * `value` the number of people observed in the given subset of the New

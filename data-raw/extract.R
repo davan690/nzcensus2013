@@ -128,7 +128,11 @@ tidy_data <- function(cells) {
   row_headers          <- get_row_headers(cells, top_left_header_cell, bottom_cell)
   col_headers          <- get_col_headers(cells, top_left_header_cell, top_left_data_cell)
   data_cells           <- get_data_cells(cells, top_left_data_cell, bottom_cell, row_headers, col_headers)
-  match_headers(data_cells, row_headers, col_headers)
+  out                  <- match_headers(data_cells, row_headers, col_headers)
+  out$title            <- filter(cells, row == 3, col == 1)$character
+  out$dimensions       <- filter(cells, row == 4, col == 1)$character
+  out$population       <- filter(cells, row == 5, col == 1)$character
+  out
 }
 
 # Import all sheets
@@ -140,8 +144,6 @@ nzcensus2013 <-
   unnest() %>%
   # Sort the columns by name, apart from sheet, row, col and value
   select(sort(colnames(.))) %>%
-  select(sheet, row, col, value, everything())
-
-write_tsv(nzcensus2013, out_path)
+  select(sheet, title, dimensions, population, row, col, value, everything())
 
 devtools::use_data(nzcensus2013, overwrite = TRUE)
