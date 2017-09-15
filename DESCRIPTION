@@ -1,0 +1,12 @@
+Package: nzcensus2013
+Title: New Zealand 2013 Census Statistics
+Version: 0.0.0.9000
+Authors@R: person("Duncan", "Garmonsway", email = "duncan.garmonsway@gmail.com", role = c("aut", "cre"))
+Description: A dataset containing aggregate statistics from the 2013 New Zealand
+    census.  This is not an official package of the New Zealand government and is
+    not associated with the New Zealand government in any way.
+Depends: R (>= 3.4.1)
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
