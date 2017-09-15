@@ -31,7 +31,7 @@
 #' * `row_header4` a subset of the New Zealand population
 #'
 #' @source
-#' \url{http://www.stats.govt.nz/Census/2013-census/data-tables/electorate-tables.aspx}
+#' http://www.stats.govt.nz/Census/2013-census/data-tables/electorate-tables.aspx
 #' released under the CC BY 4.0 licence
-#' \url{https://creativecommons.org/licenses/by/4.0/}
+#' https://creativecommons.org/licenses/by/4.0/
 "nzcensus2013"

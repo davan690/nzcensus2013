@@ -5,27 +5,28 @@
 \alias{nzcensus2013}
 \title{New Zealand 2013 census data}
 \format{A data frame with 416,085 rows and 11 variables:
-
-* `sheet` the name of the table and the worksheet that the data was imported
-    from
-* `title` the title of the table
-* `dimensions` the subgroups that the table uses
-* `population` the population that the table reports
-* `row` the row number of the cell that the data was imported from
-* `col` the column number of the cell that the data was imported from
-* `value` the number of people observed in the given subset of the New
+\itemize{
+\item \code{sheet} the name of the table and the worksheet that the data was imported
+from
+\item \code{title} the title of the table
+\item \code{dimensions} the subgroups that the table uses
+\item \code{population} the population that the table reports
+\item \code{row} the row number of the cell that the data was imported from
+\item \code{col} the column number of the cell that the data was imported from
+\item \code{value} the number of people observed in the given subset of the New
 Zealand population
-* `col_header1` a type of subset of the New Zealand population
-* `col_header2` a subset of the New Zealand population
-* `col_header3` a subset of the New Zealand population
-* `row_header1` a type of subset of the New Zealand population
-* `row_header2` a subset of the New Zealand population
-* `row_header3` a subset of the New Zealand population
-* `row_header4` a subset of the New Zealand population}
+\item \code{col_header1} a type of subset of the New Zealand population
+\item \code{col_header2} a subset of the New Zealand population
+\item \code{col_header3} a subset of the New Zealand population
+\item \code{row_header1} a type of subset of the New Zealand population
+\item \code{row_header2} a subset of the New Zealand population
+\item \code{row_header3} a subset of the New Zealand population
+\item \code{row_header4} a subset of the New Zealand population
+}}
 \source{
-\url{http://www.stats.govt.nz/Census/2013-census/data-tables/electorate-tables.aspx}
+http://www.stats.govt.nz/Census/2013-census/data-tables/electorate-tables.aspx
 released under the CC BY 4.0 licence
-\url{https://creativecommons.org/licenses/by/4.0/}
+https://creativecommons.org/licenses/by/4.0/
 }
 \usage{
 nzcensus2013
@@ -39,7 +40,7 @@ figures may not add up to totals, and values for the same data may vary in
 different tables.
 
 Source data symbols "..C" for "confidential" and "..." for "not applicable"
-have both been imported as `NA`
+have both been imported as \code{NA}
 
 Refer to the source spreadsheet for other notes.
 }
