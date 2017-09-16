@@ -5,6 +5,8 @@ Authors@R: person("Duncan", "Garmonsway", email = "duncan.garmonsway@gmail.com",
 Description: A dataset containing aggregate statistics from the 2013 New Zealand
     census.  This is not an official package of the New Zealand government and is
     not associated with the New Zealand government in any way.
+URL: https://github.com/nacnudus/nzcensus2013
+BugReports: https://github.com/nacnudus/nzcensus2013/issues
 Depends: R (>= 3.4.1)
 License: CC BY 4.0
 Encoding: UTF-8
