@@ -74,13 +74,25 @@ get_row_headers <- function(cells, top_left_header_cell, bottom_cell) {
 
 get_col_headers <- function(cells, top_left_header_cell, top_left_data_cell) {
   # Column header hierarchy is given by the row number
-  cells %>%
+  headers <-
+    cells %>%
     filter(col >= 2,
            between(row,
                    top_left_header_cell$row,
                    top_left_data_cell$row - 1),
            !is.na(character)) %>%
-    select(row, col, header = character) %>%
+    select(row, col, header = character)
+  # Fill down, fill right, and split by row into separate data frames
+  headers %>%
+    expand(row, col) %>%
+    left_join(headers, by = c("row", "col")) %>%
+    group_by(col) %>%
+    arrange(col, row) %>%
+    fill(header) %>%
+    group_by(row) %>%
+    arrange(row, col) %>%
+    fill(header) %>%
+    ungroup() %>%
     split(.$row)
 }
 
@@ -114,7 +126,7 @@ match_headers <- function(datacells, row_headers, col_headers) {
   new_colnames <-
     c("row", "col", "value",
       paste0("col_header", rev(seq_along(col_headers))),
-      paste0("row_header", rev(seq_along(row_headers))))
+      paste0("row_header", seq_along(row_headers)))
   datacells <- arrange(datacells, row, col)
   colnames(out) <- new_colnames
   out
