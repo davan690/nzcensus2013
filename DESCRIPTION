@@ -13,3 +13,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1.9000
 Roxygen: list(markdown = TRUE)
+Suggests:
+    tidyverse,
+    naturalsort,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
